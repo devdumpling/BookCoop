@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- This is the homepage for the book coop -->
+
+<html>
+  <head>
+    <title>Swap, the Oberlin Textbook Cooperative</title>
+    <meta name="description"
+	  content="A cooperative for the students of Oberlin, OH to access textbooks without paying hundreds of dollars" />
+    <meta name="keywords"
+	  content="oberlin, textbook, book, cooperative, OSCA, trade" />
+    <meta http-equiv="author"
+	  content="Devon Wells and Joe Martin" />
+    <link href="styles/home.css" type="text/css"
+	  rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="panel">
+	<a id="displayText" href="javascript:toggleabout();">about.</a>
+	<div id="about" style="display: none">
+	  <p> Swap is an Oberlin-based cooperative for books. The idea is simple: you have books that you don't want or use anymore, so exchange them for new books. For every book you donate, you get credit. Using that credit, you can get new books that you're looking for, i.e. that expensive Bio textbook.</p>
+	  <p> Anyone can become a member of Swap. We're still in the preliminary stages, but come Fall 2013 we'll have positions open for members who want to help out. Members who help out can get credit for the hours that they work, which can then be used to get books.</p>
+	  <p> Come to <b>Beerz4Bookz</b> on May 3 in a location TBA. Donate books and get credit, beer, (if you're of legal age, of course) and a good time. </p>
+	  <p> By clicking the sign up button below and entering in a valid email address, you'll be able to get on our mailing list. We'll contact you about events in the future, as well as let you know when we're starting up in the Fall!</p>
+	  <p> Site design by Devon Wells and Joe Martin</p>
+	</div>	
+	<a id="displayText" href="javascript:togglecontact();">contact.</a>
+	<div id="contact" style="display: none">
+	  <p> <i>contact@bookcoop.org</i></br>
+	  <b>for most questions.</b></p>
+	  <p> <i>dwells@oberlin.edu</i> or <i>jmartin@oberlin.edu</i></br>
+	    <b>if you need a highly trained technical monkey.</b></p>  
+	</div>
+	<a id="displayText" href="javascript:toggledonate();">donate.</a>
+	<div id="donate" style="display: none">
+	  <p> We're a non-profit that operates at cost, but any donations will go towards buying the most requested books. We will also build you a castle with a dragon and your name engraved into the sun.</p>
+	  <p> If you're interested in donating money, email <i>sjohnson@oberlin.edu</i>.</p>
+	</div>
+      </div>
+      <div id="logo">
+	<img src="images/logo.png" alt="Swap" />
+      </div>
+      <!-- END logo -->
+
+      <div id="header">
+	<p>The Oberlin Book Cooperative</p>
+      </div>  
+      <!-- END header -->
+
+      <div id="statement">
+	<p>Our mission is to make knowledge free and accessible by creating and sustaining a cooperative to exchange, share, and recycle books, and to do so democratically, sustainably, equitably, accessibly, with an emphasis on member participation. We also affirm the Rochdale and Permaculture principles. </p>
+	
+	<p>We recognize education as a human right, we seek to make traditional education more financially accessible by exchanging member labor for textbooks and other material goods. We recognize that there are many kinds of education, and we seek to facilitate grassroots learning outside of the academy through community exchange of skills, knowledge, and experience.</p>
+	
+	<p>Our organization is not for profit. Rather than allowing a select few to accumulate surplus value and control surplus labor, our goal is to share the surplus equitably among members. We operate off of volunteer member labor and our store is stocked through donations.</p>
+      </div>
+      <!-- END statement -->
+
+      <div id="involve">
+        <h1><a id="displayText" href="javascript:toggleinvolve();">sign up.</a></h1>
+      </div>
+      <!-- END involve -->
+
+      <div id="involveform" style="display: none">
+	<form Method=POST ACTION="../mailman/subscribe/info_bookcoop.org">
+	  <input type=text value="@oberlin.edu" name="email"></br>
+	  <input type=submit id="submit" value="submit">
+	</form>
+      </div>
+      <!-- END emailform -->
+
+      <!-- JAVASCRIPT -->
+      <script language="javascript"> 
+	function toggleinvolve() {
+	var ele = document.getElementById("involveform");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "block") {
+	ele.style.display = "none";
+	}
+	else {
+	ele.style.display = "block";
+	}
+	} 
+	
+	function toggleabout() {
+	var ele = document.getElementById("about");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "inline") {
+	ele.style.display = "none";
+	}
+	else {
+	ele.style.display = "inline";
+	}
+	} 
+
+	function togglecontact() {
+	var ele = document.getElementById("contact");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "inline") {
+	ele.style.display = "none";
+	}
+	else {
+	ele.style.display = "inline";
+	}
+	} 
+
+	function toggledonate() {
+	var ele = document.getElementById("donate");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "block") {
+	ele.style.display = "none";
+	}
+	else {
+	ele.style.display = "block";
+	}
+	} 
+      </script>    
+    </div>
+  </body>
+</html>
