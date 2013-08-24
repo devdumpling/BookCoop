@@ -5,7 +5,7 @@
   <head>
     <title>Swap, the Oberlin Textbook Cooperative</title>
     <meta name="description"
-	  content="A cooperative for the students of Oberlin, OH to access textbooks without paying hundreds of dollars" />
+	  content="A cooperative for the students and residents of Oberlin, OH to access textbooks without paying hundreds of dollars" />
     <meta name="keywords"
 	  content="oberlin, textbook, book, cooperative, OSCA, trade" />
     <meta http-equiv="author"
@@ -13,7 +13,18 @@
     <link href="styles/home.css" type="text/css"
 	  rel="stylesheet" />
   </head>
+
+  <!-- For facebook support -->
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    
     <div id="wrapper">
       <div id="panel">
 	<a id="displayText" href="javascript:toggleabout();">about.</a>
@@ -36,16 +47,18 @@
 	  <p> If you're interested in donating money, email <i>sjohnson@oberlin.edu</i>.</p>
 	</div>
       </div>
+
+      <!-- This is Swap's logo that's posted on the front of the page -->
       <div id="logo">
 	<img src="images/logo.png" alt="Swap" />
       </div>
-      <!-- END logo -->
 
+      <!-- This is the header, basically a subtitle -->
       <div id="header">
 	<p>The Oberlin Book Cooperative</p>
       </div>  
-      <!-- END header -->
 
+      <!-- This is our mission statement, explaining our guiding principles and values. -->
       <div id="statement">
 	<p>Our mission is to make knowledge free and accessible by creating and sustaining a cooperative to exchange, share, and recycle books. We strive to do so democratically, sustainably, and equitably with an emphasis on member participation. </p>
 	
@@ -53,27 +66,22 @@
 	
 	<p>Our organization is not for profit. Rather than allowing a select few to accumulate surplus value and control surplus labor, our goal is to share the surplus equitably among members. We operate off of volunteer member labor and our store is stocked through donations.</p>
       </div>
-      <!-- END statement -->
 
+      <!-- For toggling the signup form. -->
       <div id="involve">
         <h1><a id="displayText" href="javascript:toggleinvolve();">sign up.</a></h1>
       </div>
-      <!-- END involve -->
 
+      <!-- The actual form for signing up -->
       <div id="involveform" style="display: none">
 	<form Method=POST ACTION="../mailman/subscribe/info_bookcoop.org">
 	  <input type=text value="@oberlin.edu" name="email"></br>
 	  <input type=submit id="submit" value="submit">
 	</form>
       </div>
-      <!-- END emailform -->
 
-      <div id="facebook">
-	<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/SWAPOBC"
-		scrolling="no" frameborder="0"
-		style="border:none; width:450px; height:80px"></iframe>
-      </div>
-      <!-- END facebook -->
+      <!-- More for facebook support. This is the physical, visible part of the facebook script necessary to make the like button appear. -->
+      <div class="fb-like" data-href="https://www.facebook.com/SWAPOBC" data-send="false" data-width="450" data-show-faces="true" data-font="arial"></div>
 
 
       <!-- JAVASCRIPT -->
